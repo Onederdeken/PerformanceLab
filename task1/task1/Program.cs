@@ -7,18 +7,9 @@ namespace task1
     {
         static void Main(string[] args)
         {
-           // параметр -n и параметр -m
-           //пример dotnet run -n 4 -m 5
-            int n;
-            int m;
-            ReadArgs(out n, out m, args);
-            if (n == 0 && m == 0)
-            {
-                Console.WriteLine("ошибка");
-                Console.ReadKey();
-                System.Environment.Exit(0);
-            }
-
+            // n - первый параметр m - второй параметр
+            int n = Int32.Parse(args[0]);
+            int m = Int32.Parse(args[1]); ;
             List<int> Intervals = new List<int>();
             int FirstObjectIndex = 0;
    
@@ -27,74 +18,21 @@ namespace task1
                 if (FirstObjectIndex == 0)
                 {
                     Intervals.Add(1);
-                    FirstObjectIndex = FirstObjectIndex + (m);
+                    FirstObjectIndex += m;
                 }
                 else
-                    FirstObjectIndex = FirstObjectIndex + (m - 1);
+                    FirstObjectIndex += m - 1;
                 if (FirstObjectIndex > n)
                 {
-                    FirstObjectIndex = FirstObjectIndex - n;
+                    FirstObjectIndex -= - n;
                 }
                 Intervals.Add(FirstObjectIndex);
             }
+            //при моей реализации в конец всех интервалов добавляется 1 пример 13421 для этого удаляю последний элемент
             Intervals.RemoveAt(Intervals.Count-1);
             foreach (int i in Intervals)
             {
-                Console.Write(i+" ");
-            }
-
-
-        }
-        static void ReadArgs(out int n, out int m, string[] args)
-        {
-            n = 0;
-            m = 0;
-            for (int i = 0; i < args.Length; i++)
-            {
-                //Проверяем, является ли текущий аргумент флагом -i
-                if (args[i] == "-n")
-                {
-                    //Если дальше нет аргументов, выводим ошибку
-                    if (i + 1 >= args.Length)
-                    {
-                        Console.WriteLine("Missing argument!");
-                        break;
-                    }
-                    else
-                    {
-                        try
-                        {
-
-                           n = Int32.Parse(args[i + 1]);
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-
-                    }
-                }
-                if (args[i] == "-m")
-                {
-                    //Если дальше нет аргументов, выводим ошибку
-                    if (i + 1 >= args.Length)
-                    {
-                        Console.WriteLine("Missing argument!");
-                        break;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            m = Int32.Parse(args[i + 1]);
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-
-                    }
-                }
+                Console.Write(i);
             }
         }
     }

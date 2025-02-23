@@ -15,3 +15,4 @@ C:\Users\Karpacho Kapitovsky\source\repos\PerformanceLab\task3\task3\obj\Debug\n
 C:\Users\Karpacho Kapitovsky\source\repos\PerformanceLab\task3\task3\obj\Debug\net8.0\task3.csproj.AssemblyReference.cache
 C:\Users\Karpacho Kapitovsky\source\repos\PerformanceLab\task3\task3\obj\Debug\net8.0\task3.csproj.Up2Date
 C:\Users\Karpacho Kapitovsky\source\repos\PerformanceLab\task3\task3\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Karpacho Kapitovsky\source\repos\PerformanceLab\task3\task3\obj\Debug\net8.0\task3.sourcelink.json

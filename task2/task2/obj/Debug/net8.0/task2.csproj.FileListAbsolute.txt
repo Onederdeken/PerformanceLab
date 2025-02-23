@@ -12,3 +12,4 @@ C:\Users\Karpacho Kapitovsky\source\repos\PerformanceLab\task2\task2\obj\Debug\n
 C:\Users\Karpacho Kapitovsky\source\repos\PerformanceLab\task2\task2\obj\Debug\net8.0\task2.pdb
 C:\Users\Karpacho Kapitovsky\source\repos\PerformanceLab\task2\task2\obj\Debug\net8.0\task2.genruntimeconfig.cache
 C:\Users\Karpacho Kapitovsky\source\repos\PerformanceLab\task2\task2\obj\Debug\net8.0\ref\task2.dll
+C:\Users\Karpacho Kapitovsky\source\repos\PerformanceLab\task2\task2\obj\Debug\net8.0\task2.sourcelink.json

@@ -4,70 +4,32 @@
     {
         static void Main(string[] args)
         {
-            // параметр -Fp путь до файла
-            //dotnet run  -Fp ./TextFile1.txt
-            String FilePath;
-            ReadArgs(out FilePath,args);
-            if (FilePath == " ")
-            {
-                Console.WriteLine("Ошибка");
-                Console.ReadKey();
-                System.Environment.Exit(0);
-            }
+            
+            //dotnet run ./TextFile1.txt
+            String FilePath = args[0];
             try
             {      
-                String[] strs = File.ReadAllLines(FilePath);
-                int middleDigit=0;
-                int result = 0;
-                int[] nums = new int[strs.Length];
-                for (int i = 0; i < strs.Length; i++)
+                String[] Strs = File.ReadAllLines(FilePath);
+                List<int> Nums = new List<int>();
+                foreach (var item in Strs)
                 {
-                    nums[i] = int.Parse(strs[i]);
-                    middleDigit += nums[i];
-
+                    Nums.Add(Int32.Parse(item));
                 }
-                middleDigit/= nums.Length;
-                for (int i = 0; i < strs.Length; i++)
+                int MiddleDigit=0;
+                int Result = 0;
+                //сортируем массив и находим середину массива
+                Nums.Sort();
+                MiddleDigit = Nums[Nums.Count / 2];
+                for (int i = 0; i < Strs.Length; i++)
                 {
-                    result +=Math.Abs(nums[i]-middleDigit);
-
+                    Result +=Math.Abs(Nums[i]-MiddleDigit);
                 }
-                Console.WriteLine(result);
+                Console.WriteLine(Result);
                 Console.ReadKey();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-            }
-        }
-        static void ReadArgs(out String FilePath, string[] args)
-        {
-            FilePath = " ";
-            for (int i = 0; i < args.Length; i++)
-            {
-                //Проверяем, является ли текущий аргумент флагом -i
-                if (args[i] == "-Fp")
-                {
-                    //Если дальше нет аргументов, выводим ошибку
-                    if (i + 1 >= args.Length)
-                    {
-                        Console.WriteLine("Missing argument!");
-                        break;
-                    }
-                    else
-                    {
-                        try
-                        {
-
-                            FilePath = args[i + 1];
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-
-                    }
-                }
             }
         }
     }

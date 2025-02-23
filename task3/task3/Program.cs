@@ -10,33 +10,29 @@ namespace task3
         static void Main(string[] args)
         {
             //Запуск программы с аргументами
-            //dotnet run -ValuePath .\values-c44d5c50d1.json -TestPath .\tests-edf09d69ff.json -ReportPath .\report.json
-            // -ValuePath путь до файла values.json
-            // -TestPath путь до файла tests.json
-            //  -ReportPath путь до файла report.json
-            System.String ValueFilePath =" ";
-            System.String TestFilePath = " ";
-            System.String ReportPath=" ";
-            
-            ReadArgs(out ValueFilePath, out TestFilePath, out ReportPath,args);
+            //dotnet run  .\values-c44d5c50d1.json  .\tests-edf09d69ff.json  .\report.json
+            //values.json первый аргумент tests.json второй агрумент report.json третий аргумент
+            System.String ValueFilePath = args[0];
+            System.String TestFilePath = args[1];
+            System.String ReportPath= args[2];
             // Загрузка данных из файлов
-            var testsData = LoadJson(TestFilePath);
-            var valuesData = LoadJson(ValueFilePath);
+            var TestsData = LoadJson(TestFilePath);
+            var ValuesData = LoadJson(ValueFilePath);
 
             // Создание словаря для быстрого поиска значений по id
-            var valuesDict = new Dictionary<int, string>();
-            foreach (var value in valuesData["values"])
+            var ValuesDict = new Dictionary<int, string>();
+            foreach (var value in ValuesData["values"])
             {
-                valuesDict[value["id"].ToObject<int>()] = value["value"].ToString();
+                ValuesDict[value["id"].ToObject<int>()] = value["value"].ToString();
             }
 
             // Заполнение значений в структуре tests
-            FillValues(testsData["tests"], valuesDict);
+            FillValues(TestsData["tests"], ValuesDict);
 
             // Сохранение результата в report.json
             using (var writer = new StreamWriter(ReportPath))
             {
-                writer.Write(testsData.ToString((Newtonsoft.Json.Formatting)Formatting.Indented));
+                writer.Write(TestsData.ToString((Newtonsoft.Json.Formatting)Formatting.Indented));
             }
         }
 
@@ -47,89 +43,20 @@ namespace task3
                 return JObject.Parse(reader.ReadToEnd());
             }
         }
-        static void FillValues(JToken tests, Dictionary<int, string> valuesDict)
+        static void FillValues(JToken tests, Dictionary<int, string> ValuesDict)
         {
             foreach (var test in tests)
             {
-                if (test["id"] != null && valuesDict.ContainsKey(test["id"].ToObject<int>()))
+                if (test["id"] != null && ValuesDict.ContainsKey(test["id"].ToObject<int>()))
                 {
-                    test["value"] = valuesDict[test["id"].ToObject<int>()];
+                    test["value"] = ValuesDict[test["id"].ToObject<int>()];
                 }
 
                 if (test["values"] != null)
                 {
-                    FillValues(test["values"], valuesDict);
+                    FillValues(test["values"], ValuesDict);
                 }
             }
         }
-        static void ReadArgs(out System.String Value, out System.String Test, out System.String ReportPath, string[] args)
-        {
-            Value = "";
-            Test = " ";
-            ReportPath = " ";
-            for (int i = 0; i < args.Length; i++)
-            {
-                //Проверяем, является ли текущий аргумент флагом -i
-                if (args[i] == "-ValuePath")
-                {
-                    //Если дальше нет аргументов, выводим ошибку
-                    if (i + 1 >= args.Length)
-                    {
-                        Console.WriteLine("Missing argument!");
-                        break;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            
-                            Value = args[i + 1];
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);  
-                        }
-                       
-                       
-
-                    }
-                }
-                if (args[i] == "-TestPath")
-                {
-                    //Если дальше нет аргументов, выводим ошибку
-                    if (i + 1 >= args.Length)
-                    {
-                        Console.WriteLine("Missing argument!");
-                        break;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            Test = args[i + 1];
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                        }
-
-                    }
-                }
-                if (args[i] == "-ReportPath")
-                {
-                    //Если дальше нет аргументов, выводим ошибку
-                    if (i + 1 >= args.Length)
-                    {
-                        Console.WriteLine("Missing argument!");
-                        break;
-                    }
-                    else
-                    {
-                        ReportPath = args[i + 1];
-                    }
-                }
-            }
-        }
-            
     }
 }
