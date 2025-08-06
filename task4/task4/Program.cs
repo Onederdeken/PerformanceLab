@@ -2,13 +2,14 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            
-            //dotnet run ./TextFile1.txt
-            String FilePath = args[0];
+
+            //dotnet run C:\Users\Karpacho Kapitovsky\Desktop\PerformanceLab\task4\task4\TextFile1.txt 
             try
-            {      
+            {
+                Console.Write("Путь до файла: ");
+                String FilePath = Console.ReadLine();
                 String[] Strs = File.ReadAllLines(FilePath);
                 List<int> Nums = new List<int>();
                 foreach (var item in Strs)
@@ -24,7 +25,7 @@
                 {
                     Result +=Math.Abs(Nums[i]-MiddleDigit);
                 }
-                Console.WriteLine(Result);
+                Console.WriteLine($"Минимальное количество ходов:{Result}");
                 Console.ReadKey();
             }
             catch (Exception ex)

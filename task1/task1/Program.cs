@@ -1,39 +1,86 @@
 ﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.IO;
+using System.Text;
 
 namespace task1
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            // n - первый параметр m - второй параметр
-            int n = Int32.Parse(args[0]);
-            int m = Int32.Parse(args[1]); ;
-            List<int> Intervals = new List<int>();
-            int FirstObjectIndex = 0;
-   
-            while (FirstObjectIndex != 1)
+            int n;
+            int m;
+            var initmass = (int n, int m) =>
             {
-                if (FirstObjectIndex == 0)
+                int[] interval = new int[m];
+                int index = 1;
+                for (int i = 0; i < m; i++)
                 {
-                    Intervals.Add(1);
-                    FirstObjectIndex += m;
+                    if (index > n)
+                    {
+                        index = 1;
+                        interval[i] = index;
+                    }
+                    else interval[i] = index;
+
+                    index += 1;
                 }
-                else
-                    FirstObjectIndex += m - 1;
-                if (FirstObjectIndex > n)
-                {
-                    FirstObjectIndex -= - n;
-                }
-                Intervals.Add(FirstObjectIndex);
-            }
-            //при моей реализации в конец всех интервалов добавляется 1 пример 13421 для этого удаляю последний элемент
-            Intervals.RemoveAt(Intervals.Count-1);
-            foreach (int i in Intervals)
+                return interval;
+            };
+            var procces = (int[] interval, int m, int n) =>
             {
-                Console.Write(i);
+                int result = 0;
+                int indexlast = interval.Length - 1;
+                StringBuilder strresult = new StringBuilder("1");
+                if (interval[indexlast] == 1) result = 1;
+                while (result == 0)
+                {
+                    int indexThisInterval = 0;
+                    while (indexThisInterval < m)
+                    {
+                        if (indexThisInterval == 0)
+                        {
+                            interval[indexThisInterval] = interval[indexlast];
+                        }
+                        else
+                        {
+                            int number = interval[indexThisInterval - 1] + 1;
+                            if (number <= n) interval[indexThisInterval] = interval[indexThisInterval - 1] + 1;
+                            else interval[indexThisInterval] = 1;
+                        }
+                        indexThisInterval++;
+                    }
+                
+                    if (interval[indexlast] == 1)
+                    {
+                        strresult.Append(interval[0].ToString());
+                        result = 1;
+                    }
+                    else strresult.Append(interval[0]);
+                    
+                  
+                }
+                Console.WriteLine($"Полученный путь:{strresult.ToString()}");
+            };
+            while (true)
+            {
+                try
+                {
+                    Console.Write("\nn=");
+                    n = System.Convert.ToInt32(Console.ReadLine());
+                    Console.Write("\n");
+                    Console.Write("m=");
+                    m = System.Convert.ToInt32(Console.ReadLine());
+
+                    int[] interval = initmass.Invoke(n, m);
+                    procces.Invoke(interval, m, n);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
+            
         }
     }
 }

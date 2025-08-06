@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task4\\task4\\task4.csproj": {}
+    "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task4\\task4\\task4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task4\\task4\\task4.csproj": {
+    "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task4\\task4\\task4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task4\\task4\\task4.csproj",
+        "projectUniqueName": "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task4\\task4\\task4.csproj",
         "projectName": "task4",
-        "projectPath": "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task4\\task4\\task4.csproj",
+        "projectPath": "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task4\\task4\\task4.csproj",
         "packagesPath": "C:\\Users\\Karpacho Kapitovsky\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task4\\task4\\obj\\",
+        "outputPath": "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task4\\task4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,9 +43,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -66,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

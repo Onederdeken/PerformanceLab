@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task1\\task1\\",
+  "WorkspaceRootPath": "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task1\\task1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB380DFF-47ED-41BF-A833-04D77ED8763B}|task1.csproj|c:\\users\\karpacho kapitovsky\\source\\repos\\performancelab\\task1\\task1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CB380DFF-47ED-41BF-A833-04D77ED8763B}|task1.csproj|c:\\users\\karpacho kapitovsky\\desktop\\performancelab\\task1\\task1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB380DFF-47ED-41BF-A833-04D77ED8763B}|task1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task1\\task1\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task1\\task1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task1\\task1\\Program.cs",
+              "ToolTip": "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task1\\task1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwEMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T16:17:13.994Z",
               "EditorCaption": ""

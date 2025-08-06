@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task4\\task4\\",
+  "WorkspaceRootPath": "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task4\\task4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDA708A5-9C32-42D5-B8B8-4D9D1DA58B22}|task4.csproj|c:\\users\\karpacho kapitovsky\\source\\repos\\performancelab\\task4\\task4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CDA708A5-9C32-42D5-B8B8-4D9D1DA58B22}|task4.csproj|c:\\users\\karpacho kapitovsky\\desktop\\performancelab\\task4\\task4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDA708A5-9C32-42D5-B8B8-4D9D1DA58B22}|task4.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDA708A5-9C32-42D5-B8B8-4D9D1DA58B22}|task4.csproj|c:\\users\\karpacho kapitovsky\\source\\repos\\performancelab\\task4\\task4\\textfile1.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{CDA708A5-9C32-42D5-B8B8-4D9D1DA58B22}|task4.csproj|c:\\users\\karpacho kapitovsky\\desktop\\performancelab\\task4\\task4\\textfile1.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{CDA708A5-9C32-42D5-B8B8-4D9D1DA58B22}|task4.csproj|solutionrelative:textfile1.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
@@ -28,23 +28,24 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "TextFile1.txt",
-              "DocumentMoniker": "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task4\\task4\\TextFile1.txt",
+              "DocumentMoniker": "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task4\\task4\\TextFile1.txt",
               "RelativeDocumentMoniker": "TextFile1.txt",
-              "ToolTip": "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task4\\task4\\TextFile1.txt",
+              "ToolTip": "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task4\\task4\\TextFile1.txt",
               "RelativeToolTip": "TextFile1.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-02-19T19:57:06.71Z"
+              "WhenOpened": "2025-08-06T16:24:38.957Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task4\\task4\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task4\\task4\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Karpacho Kapitovsky\\source\\repos\\PerformanceLab\\task4\\task4\\Program.cs",
+              "ToolTip": "C:\\Users\\Karpacho Kapitovsky\\Desktop\\PerformanceLab\\task4\\task4\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T19:56:30.897Z",
               "EditorCaption": ""

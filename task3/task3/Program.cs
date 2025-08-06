@@ -10,11 +10,15 @@ namespace task3
         static void Main(string[] args)
         {
             //Запуск программы с аргументами
-            //dotnet run  .\values-c44d5c50d1.json  .\tests-edf09d69ff.json  .\report.json
-            //values.json первый аргумент tests.json второй агрумент report.json третий аргумент
-            System.String ValueFilePath = args[0];
-            System.String TestFilePath = args[1];
-            System.String ReportPath= args[2];
+            //C:\Users\Karpacho Kapitovsky\Desktop\PerformanceLab\task3\task3\tests-edf09d69ff.json
+            //C:\Users\Karpacho Kapitovsky\Desktop\PerformanceLab\task3\task3\values-c44d5c50d1.json
+            //C:\Users\Karpacho Kapitovsky\Desktop\PerformanceLab\task3\task3\report.json
+            Console.Write($"УКАЖИТЕ ПУТЬ К ФАЙЛУ tests.json: ");
+            System.String TestFilePath = Console.ReadLine();
+            Console.Write($"УКАЖИТЕ ПУТЬ К ФАЙЛУ values.json: ");
+            System.String ValueFilePath = Console.ReadLine();
+            Console.Write($"УКАЖИТЕ ПУТЬ К ФАЙЛУ report.json: ");
+            System.String ReportPath = Console.ReadLine();
             // Загрузка данных из файлов
             var TestsData = LoadJson(TestFilePath);
             var ValuesData = LoadJson(ValueFilePath);
